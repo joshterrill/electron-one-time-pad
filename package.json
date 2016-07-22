@@ -1,6 +1,6 @@
 {
   "name": "electron-one-time-pad",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A one-time pad cipher written in nodejs for electron",
   "main": "main.js",
   "scripts": {
@@ -24,5 +24,9 @@
   "homepage": "https://github.com/joshterrill.com/electron-one-time-pad#readme",
   "devDependencies": {
     "electron-prebuilt": "^1.2.0"
+  },
+  "dependencies": {
+    "one-time-pad": "^1.0.3",
+    "string-random": "^0.1.0"
   }
 }
