@@ -1,4 +1,4 @@
-# electron-one-time-pad (not yet functional!)
+# electron-one-time-pad (kinda functional)
 
 A one-time pad cipher written in nodejs for electron
 
