@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Electron One-time Pad</title>
+    <link rel="stylesheet" href="components/material-kit-master/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="components/material-kit-master/assets/css/material-kit.css">
+    <link rel="stylesheet" href="components/material-kit-master/assets/css/demo.css">
+    <link rel="stylesheet" href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css">
+    <script>
+      window.$ = window.jQuery = require(__dirname+'/components/material-kit-master/assets/js/jquery.min.js');
+    </script>
+    <script src="components/material-kit-master/assets/js/bootstrap.min.js"></script>
+    <script src="components/material-kit-master/assets/js/material.min.js"></script>
+    <script src="components/material-kit-master/assets/js/material-kit.js"></script>
+  <style>
+    .container {
+      margin-top: 40px;
+      margin-left: 40px;
+      margin-right: 40px;
+      margin-bottom: 40px;
+    }
+    .card {
+      padding: 20px;
+      border-radius: 5px;
+      text-align: center;
+    }
+    body {
+      background: url("http://demos.creative-tim.com/material-kit/assets/img/bg2.jpeg") center no-repeat;
+
+    }
+    .key-control {
+      width: 430px;
+    }
+    .rnd-key {
+      position: absolute;
+      z-index: 9999;
+      right: 22px;
+      bottom: 117px;
+    }
+
+    button.btn-active {
+      background-color: rgba(156, 39, 176, 0.72) !important;
+      box-shadow: 0 14px 26px -12px rgba(156, 39, 176, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(156, 39, 176, 0.2) !important;
+    }
+    .output-arrow i {
+      font-size: 40px;
+      color: #9c27b0;
+    }
+    .output-arrow p {
+      text-transform: uppercase;
+      font-weight: 600;
+      color: #1d1d1d;
+    }
+  </style>
+  </head>
+  <body>
+  <div class="container">
+    <div class="row">
+      <div class="card">
+        <button class="btn btn-primary btn-round btn-active">
+          Encrypt
+        </button>
+        <button class="btn btn-primary btn-round">
+          Decrypt
+        </button>
+        <input class="form-control" placeholder="Enter message here..." value="Message encrypted by Electron One-time Pad!" type="text">
+        <button class="btn btn-primary btn-md rnd-key">Random Key</button>
+        <input class="form-control key-control" placeholder="Enter key here..." value="MUOZDMKRMIMDFRDEUDQDDJIKBMVIKDVXWDFUBTGV" type="text">
+        <div class="output-arrow">
+          <i class="fa fa-arrow-circle-o-down" aria-hidden="true"></i>
+          <p>Output</p>
+        </div>
+        <div class="output">
+          YYGRDSOVZKDBUKHHVBUOHLBBPZJVOWDJASFX
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </body>
+
+  <script>
+    // You can also require other files to run in this process
+    require('./renderer.js')
+  </script>
+</html>
